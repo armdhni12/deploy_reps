@@ -5,7 +5,7 @@ import pickle
 app=Flask(__name__)
 
 #load model
-model_file=open('mantab.pkl','rb')
+model_file=open('logreg.pkl','rb')
 model=pickle.load(model_file,encoding='bytes')
 
 #make the route
