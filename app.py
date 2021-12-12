@@ -14,6 +14,10 @@ model=pickle.load(model_file,encoding='bytes')
 def index():
     return render_template('deploy.html',pm10="0",pm25='0',so2='0',co='0',o3='0',no2='0',air_quality='Normal')
 
+@app.route('/cekdata')
+def cek_data():
+    return render_template('https://data.jakarta.go.id/dataset/indeks-standar-pencemaran-udara-ispu-tahun-2021')
+
 @app.route('/predict',methods=['POST'])
 # def __init__(self,pm10,pm25,so2,co,o3,no2):
 #     self.pm10=pm10
